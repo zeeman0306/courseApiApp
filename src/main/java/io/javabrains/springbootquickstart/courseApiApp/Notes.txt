@@ -1,0 +1,90 @@
+What is spring?
+An application framework
+Has a programming and configuration model
+Infrastructure support - support for connecting to databases
+
+Problems with Spring
+Huge framework
+Multiple setup steps
+-MongoDB, RDPMS, JDO, etc.
+Multiple configuration steps
+Multiple build and deploy steps
+
+Enter Spring Boot
+opinionated
+convention over configuration
+stand alone
+
+Java Dependencies
+Jars in Class pot
+Maven lets you declare all of the dependencies in a single file
+
+Starting spring boot
+Step 1.Tell spring that this is a spring application with an annotation for the main class (@SpringBootApplication)
+
+-Sets up default configuration
+-Starts Spring application context
+-Perform class path scan
+--scans classes for special annotations, treating controller as controllers, services as services, etc.
+-Starts Tomcat Server
+
+Let's add a controller
+-A Java class
+-Marked with annotations
+-Has info about:
+--What URL access triggers it?
+--What method to run when accessed?
+
+Embedded Tomcat Server
+-Convenience
+-Servlet container config is now application config
+-Standalone application
+-Useful for microservices architecture
+
+Spring MVC Controller
+-Maps a URI and HTTP Method to a Functionality(Java Method)
+-Don't worry about converting to JSON, that's done for you
+
+Course API
+-Resources
+--(Topic, Course, Lesson)
+-Topics
+--GET  /topics  Gets all topics
+--GET  /topics/id  Gets the topic
+--POST  /topics  Create new Topic
+--PUT  /topics/id  Updates the topic
+--DELETE  /topics/is Deletes the topic
+
+-Courses
+--GET  /courses  Gets all courses
+etc.
+
+-Lessons
+--GET  /lessons  Gets all lessons
+etc.
+
+In Unit 3
+-Starting  Spring Boot App
+--Spring Initializr
+--Spring Boot CLI
+--STS IDE
+-Configuration
+
+Customizing Spring Boot
+-application.properties
+
+
+Spring Dats JPA: The Data Tier
+-Spring Boot Quick Start
+
+-Spring Data JPA
+--Java Persistence API lets you do ORM
+--Object-Relational Mapping(SQL)
+---Class <-> Table
+--SQL is a Relational Database
+
+JPA Repository
+-Entity annotation makes Topic into a table with each instance variable as columns in the tables
+-ID annotation notates the primary key in the class with the Entity annotation
+
+Many-To-One
